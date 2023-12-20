@@ -29,6 +29,7 @@
 here main is the local branch name you can give it any name
 
 
+
 ## Difference between Remote, Master, Origin and Main
 
 1. MASTER: This is the default branch named in git repository
@@ -41,6 +42,7 @@ here main is the local branch name you can give it any name
            between repositories(someones repository and our local repository called Origin).
 
 
+
 ## Make a remote and fetch your repo
 (here remote name is origin bydefault and remote is used to add changes)
 
@@ -49,10 +51,12 @@ here main is the local branch name you can give it any name
 #add .git at the end of your url
 
 
+
 ## git push
 >>> after all changes push your all changes to git
 <git push -u origin main>
 The -u flag creates a tracking reference for every branch that you successfully push onto the remote repository.
+
 
 
 # about some common commands
@@ -70,6 +74,8 @@ see what is your current remote
 
 <git branch>
 see all branches
+
+
 
 
 ## after git add --all
@@ -95,6 +101,8 @@ Here are the steps to do this:>
 <git push origin main>
 
 
+
+
 ## Commands to clone my own repo to local and start pushing and commiting
 >create a new directory
 >go to that directory in terminal
@@ -108,6 +116,8 @@ Here are the steps to do this:>
 <git add --all>
 <git commit -m "message">
 <git push origin main>
+
+
 
 
 # how to work on a global repository by cloning them to your git
@@ -147,12 +157,15 @@ Open the conflicted files, resolve the conflicts, and then add and commit the ch
 <git push origin <branch_name>> # default branch_name is "main"
 <NOTE: Make sure you've pushed the changes to your forked repository on GitHub.>
 
+
+
 >> After that you may get popup for authorization then do the authorization using your git account id where you forked this repo
 
 <NOTE: After commit changes are stored in local
 But after push changes are stored in both local and the remote repo>
 
 <NOTE: Keep in mind that "git_fetch" and "git_pull" help you synchronize your local repository with the remote, preventing conflicts that might arise if someone else has pushed changes in the meantime. If there are changes on the remote, it's a good practice to fetch them before making your own changes and pushing them.>
+
 
 >> After pushing you have to create a pull request from your git:
 
@@ -165,6 +178,7 @@ i.e, https://github.com/your-username/repository.
 >>> click on that
 >>Click on the "New Pull Request" button
 
+
 >>> Now choose the branches carefully:
 i.e,
 <In the "base repository" dropdown, select the repository of the owner (the original repository).
@@ -173,16 +187,20 @@ In the "head repository" dropdown, select your forked repository.
 In the "compare" dropdown, select the branch you pushed changes to (feature-branch).
 >
 
+
 >>> Review changes
 >>> Add a Title and Description
 >>> Click on the "Create pull request" button.
 >>> Your pull request will be created, and the owner of the original repository will be notified.
 >>> They will review your changes and either merge them, request modifications, or close the pull request.
 
+
+
 <IMPORTANT NOTES:
 1. Make sure you are pushing changes to a new branch in your forked repository.
 2. Be clear and descriptive in your pull request description, explaining what the changes are and why they are necessary.
 3. If there are changes requested by the repository owner, make the modifications locally, commit, and push the changes. The pull request will be automatically updated.>
+
 
 
 # How to clone repo from SSH
@@ -200,3 +218,22 @@ or,
 <git remote add origin ssh_url>
 >> navigate to your repo in terminal
 <git fetch origin>
+
+
+# Summary for working on own repo
+[git config --global user.name "username"]
+[git config --global user.email "mail_id"]
+[git config --global push.default matching]
+[git config --global alias.co checkout]
+
+[git init]
+[git fetch origin]
+[git add . ]
+[git commit -m "Initial Commit"]
+
+Now, Create a repo in your github.com
+
+[git remote add origin repo_url.git]
+[git branch -M main]
+[git push -u origin main]
+[git pull origin main]
