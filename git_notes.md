@@ -212,7 +212,7 @@ or,
 - `git pull origin main`
 
 # Errors solve
-`(venv) verve@verve-VSL015:~/Desktop/training/Final_Demo$ git pull origin main
+- (venv) verve@verve-VSL015:~/Desktop/training/Final_Demo$ git pull origin main
 From github.com:satyamverve/Task-Management-FastAPI
  * branch            main       -> FETCH_HEAD
 hint: You have divergent branches and need to specify how to reconcile them.
